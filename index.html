@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./assets/fonts/font.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
@@ -216,7 +223,9 @@
           <hr />
           <div class="table">
             <div class="column">
-              <div class="col1"><p class="text1 padding3">Objective type</p></div>
+              <div class="col1">
+                <p class="text1 padding3">Objective type</p>
+              </div>
               <div class="divider"><div></div></div>
               <div class="col"><p class="text1 padding3">Division</p></div>
               <div class="divider"><div></div></div>
@@ -286,10 +295,14 @@
               <div class="divider2"><div></div></div>
               <div class="col3">
                 <div class="progressbar">
-                  <div>
-                    <progress min="0" max="100" value="25"></progress>
-                  </div>
-                  <div class="details1"><p class="text4 color2">25</p></div>
+                  <progress min="0" max="100" value="25"></progress>
+
+                  <input
+                    type="text"
+                    value="25"
+                    class="text4 color2 details1"
+                    readonly
+                  />
                   <div class="text4 color2">%</div>
                 </div>
               </div>
@@ -300,8 +313,8 @@
               </div>
               <div class="divider3"><div></div></div>
               <div>
-                <div class="row1">
-                  <div class="list">
+                <div class="row1 flex1">
+                  <div class="list task">
                     <li class="text3 color2 padding1 border1">
                       We have companyX as client
                     </li>
@@ -314,7 +327,7 @@
                   </div>
                 </div>
                 <div class="row1">
-                  <div class="list">
+                  <div class="list flex3">
                     <li class="text3 color2 padding1 border1">
                       We are larger than competitorY
                     </li>
@@ -405,7 +418,12 @@
                   <div>
                     <progress min="0" max="100" value="25"></progress>
                   </div>
-                  <div class="details1"><p class="text4 color2">25</p></div>
+                  <input
+                    type="text"
+                    value="25"
+                    class="text4 color2 details1"
+                    readonly
+                  />
                   <div class="text4 color2">%</div>
                 </div>
               </div>
@@ -452,7 +470,7 @@
               <div class="divider2"><div></div></div>
               <div class="col4">
                 <div class="description">
-                  <div class="border1 details color2">
+                  <div class="border1 details color2 flex1 task">
                     <p class="text3">
                       By 2030 we want to be the leader in XXX with only newly
                       launched product line
@@ -468,13 +486,18 @@
                   </div>
                 </div>
               </div>
-              <div class="divider2 "><div></div></div>
+              <div class="divider2"><div></div></div>
               <div class="col3">
                 <div class="progressbar">
                   <div>
-                    <progress min="0" max="100" value="25"></progress>
+                    <progress min="0" max="100" value="25">25%</progress>
                   </div>
-                  <div class="details1"><p class="text4 color2">25</p></div>
+                  <input
+                    type="text"
+                    value="25"
+                    class="text4 color2 details1"
+                    readonly
+                  />
                   <div class="text4 color2">%</div>
                 </div>
               </div>
@@ -485,49 +508,358 @@
           </div>
         </div>
 
-        <div class="padding2 ">
+        <div class="padding2">
           <div class="priorities flex1">
-              <div>
-                <img src="./assets/images/mainPage/CaretUp.png" alt="caret">
+            <div>
+              <img src="./assets/images/mainPage/CaretUp.png" alt="caret" />
+            </div>
+            <div class="flex2">
+              <p class="text5 color3">Prioritized Tasks</p>
+            </div>
+            <div class="flex1 buttons">
+              <div class="flex1 checkbox">
+                <div><input type="checkbox" /></div>
+                <div><p class="text2">Show Completed</p></div>
               </div>
-              <div class="flex2">
-                <p class="text5 color3" >Prioritized Tasks</p>
-              </div>
-              <div class="flex1 buttons">
-                <div class="flex1 checkbox">
-                  <div><input type="checkbox"></div>
-                  <div><p  class="text2">Show Completed</p></div>
+              <button class="taskButton flex1">
+                <div class="plusImg">
+                  <img src="./assets/images/mainPage/Plus.png" alt="plus" />
                 </div>
-                  <button class="taskButton flex1">
-                    <div class="plusImg">
-                      <img src="./assets/images/mainPage/Plus.png" alt="plus"></div>
-                    <div>
-                      <p class="text1 color5">Add Task</p>
-                    </div>
-                  </button>
-              </div>
-              </div>
-              <hr>
-              <div class="flex1 task">
-                <div class="padding3"><p class="text1">Task</p></div>
-                <div class="flex1 padding3 filter">
-                  <div><p class="text1">Due Date</p></div>
-                  <div><img src="./assets/images/mainPage/Funnel.png" alt="filter"></div>
+                <div>
+                  <p class="text1 color5">Add Task</p>
                 </div>
-                <div class="padding3"><p class="text1">Time Remaining</p></div>
-                <div class="flex1 padding3 filter">
-                  <div ><p class="text1">Priority</p></div>
-                  <div><img src="./assets/images/mainPage/Funnel.png" alt="filter"></div>
-                </div>
-              </div>
+              </button>
+            </div>
           </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+          <hr />
+          <div class="flex1 taskbar">
+            <div class="padding3 flex3">
+              <p class="text1">Task</p>
+            </div>
+            <div class="padding3">
+              <div class="gap1 flex3">
+                <div><p class="text1">Due Date</p></div>
+                <div>
+                  <img src="./assets/images/mainPage/Funnel.png" alt="filter" />
+                </div>
+              </div>
+            </div>
+            <div class="padding3 flex3">
+              <p class="text1">Time Remaining</p>
+            </div>
+            <div class="flex3 padding3 gap1">
+              <div>
+                <p class="text1">Priority</p>
+              </div>
+              <div>
+                <img src="./assets/images/mainPage/Funnel.png" alt="filter" />
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row3">
+            <div class="grid1">
+              <div class="flex2">
+                <div class="checkbox-section">
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    id="recod"
+                    checked
+                    class="checkbox-round"
+                  />
+                </div>
+                <div class="input-section">
+                  <input
+                    type="text"
+                    value="Prepare Marketing Review March - 2022"
+                    class="border1"
+                    id="activeTask"
+                  />
+                </div>
+              </div>
+              <div class="dueDate">
+                <input
+                  type="text"
+                  value="01.01.2023"
+                  readonly
+                  class="border1"
+                />
+              </div>
+              <div class="time">
+                <button class="btn">
+                  <div>
+                    <i class="fa-regular fa-clock"></i>
+                  </div>
+                  <div class="text1 color2">28d</div>
+                </button>
+              </div>
+              <div class="priority">
+                <button class="btn bgColor3">
+                  <div class="text1 color6 color6">High</div>
+                  <div>
+                    <i
+                      class="fa-solid fa-angle-down"
+                      style="color: #b20024"
+                    ></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <hr />
+            <div class="grid1">
+              <div class="flex2">
+                <div class="checkbox-section">
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    id="recod"
+                    checked
+                    class="checkbox-round"
+                  />
+                </div>
+                <div class="input-section">
+                  <input
+                    type="text"
+                    value="Prepare Marketing Review March - 2022"
+                    class="border1"
+                  />
+                </div>
+              </div>
+              <div class="dueDate">
+                <input
+                  type="text"
+                  value="01.01.2023"
+                  readonly
+                  class="border1"
+                />
+              </div>
+              <div class="time">
+                <button class="btn bgColor3">
+                  <div>
+                    <i class="fa-regular fa-clock" style="color: #b20024"></i>
+                  </div>
+                  <div class="text1 color2 color6">-3d</div>
+                </button>
+              </div>
+              <div class="priority">
+                <button class="btn bgColor2">
+                  <div class="text1 color4">Medium</div>
+                  <div>
+                    <i
+                      class="fa-solid fa-angle-down"
+                      style="color: #b26000"
+                    ></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <hr />
+            <div class="grid1">
+              <div class="flex2">
+                <div class="checkbox-section">
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    id="recod"
+                    checked
+                    class="checkbox-round"
+                  />
+                </div>
+                <div class="input-section">
+                  <input
+                    type="text"
+                    value="Prepare Marketing Review March - 2022"
+                    class="border1"
+                  />
+                </div>
+              </div>
+              <div class="dueDate">
+                <input
+                  type="text"
+                  value="01.01.2023"
+                  readonly
+                  class="border1"
+                />
+              </div>
+              <div class="time">
+                <button class="btn">
+                  <div>
+                    <i class="fa-regular fa-clock"></i>
+                  </div>
+                  <div class="text1 color2">2hrs</div>
+                </button>
+              </div>
+              <div class="priority">
+                <button class="btn bgColor3">
+                  <div class="text1 color6">High</div>
+                  <div>
+                    <i
+                      class="fa-solid fa-angle-down"
+                      style="color: #b20024"
+                    ></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <hr />
+            <div class="grid1">
+              <div class="flex2">
+                <div class="checkbox-section">
+                  <input
+                    type="checkbox"
+                    name="checkbox"
+                    id="recod"
+                    checked
+                    class="checkbox-round"
+                  />
+                </div>
+                <div class="input-section">
+                  <input
+                    type="text"
+                    value="Prepare Marketing Review March - 2022"
+                    class="border1"
+                  />
+                </div>
+              </div>
+              <div class="dueDate">
+                <input
+                  type="text"
+                  value="01.01.2023"
+                  readonly
+                  class="border1"
+                />
+              </div>
+              <div class="time">
+                <button class="btn">
+                  <div>
+                    <i class="fa-regular fa-clock"></i>
+                  </div>
+                  <div class="text1 color2">1d</div>
+                </button>
+              </div>
+              <div class="priority">
+                <button class="btn bgColor4">
+                  <div class="text1 color1">Low</div>
+                  <div>
+                    <i
+                      class="fa-solid fa-angle-down"
+                      style="color: #089605"
+                    ></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div class="more">
+            <p class="color5">Show 5 More</p>
+          </div>
+        </div>
+
+        <div class="padding2">
+          <div class="kpis padding4">
+            <div class="kpisDate flex4">
+              <div class="text5">KPIs</div>
+              <div class="text1">Show KPIs for:</div>
+              <div class="flex4 date">
+                <div class="text4 color3">2022</div>
+                <div>
+                  <i class="fa-regular fa-calendar" style="color: #585874"></i>
+                </div>
+              </div>
+              <div class="flex4 date">
+                <div class="text4 color3">Jan</div>
+                <div>
+                  <i class="fa-solid fa-angle-down" style="color: #585874"></i>
+                </div>
+              </div>
+              <div class="text1 color3">Current Week:2022-02-Q2-CW 28</div>
+            </div>
+            <div>
+              <button class="btn">
+                <div>
+                  <i class="fa-solid fa-plus" style="color: #3030d3"> </i>
+                </div>
+                <div class="text1 color5">Add KPI</div>
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="kpiDetails padding4">
+            <div class="header flex2">
+              <div>
+                <i class="fa-solid fa-angle-up" style="color: #3030d3"></i>
+              </div>
+              <div class="flex4" style="gap: 4px">
+                <div class="text2 color3">Plastics</div>
+                <div
+                  style="
+                    padding: 3px 8px;
+                    background-color: #ebebfe;
+                    border-radius: 6px;
+                  "
+                  class="text1 color5"
+                >
+                  4
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kpiTable flex1">
+            <div class="text1 colm1">KPI</div>
+            <div class="text1 colm2">Responsible</div>
+            <div class="text1 colm3">Graph</div>
+            <div class="text1 colm4">Unit</div>
+            <div class="text1 colm5">Monthly Target</div>
+            <div class="text1 colm5">Monthly Actual</div>
+            <div class="text1 colm5">Month,%</div>
+            <div class="text1 colm5">YTD Target</div>
+          </div>
+          <hr />
+          <div class="kpiRow flex1">
+            <div class="colm1">
+             <div class="kpiName  ">
+              <div>
+                <i class="fa-solid fa-angle-up" style="color: #3030d3"></i>
+              </div>
+              <div class="color5 text2 flex1">
+                Cost per lead
+                <pre></pre>
+              </div>
+              <div class="color2">...</div>
+             </div>
+            </div>
+            <div class="respons flex1 colm2">
+              <div class="responseImg">
+                <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
+              </div>
+              <div class="personName  text2 color2">P.G.</div>
+            </div>
+            <div class="graph colm3 flex1">
+              <i class="fa-solid fa-chart-column" style="color: #585874;"></i>
+            </div>
+            <div class="unit colm4">
+              <div class="text2 color3">
+                &euro;/$
+              </div>
+            </div>
+            <div class="monthlyTarget colm5 padding3">
+              <input type="text" value="150">
+            </div>
+            <div class="actual colm5 padding3">
+
+            </div>
+            <div class="month colm5 padding3">
+
+            </div>
+            <div class="target colm5 padding3">
+
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </body>
