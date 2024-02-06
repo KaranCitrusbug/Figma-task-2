@@ -1056,14 +1056,14 @@ input[type="checkbox"] {
   border: none;
   border-radius: 6px;
 }
-.initiatives svg{
+ svg{
   width:16px;
   height: 16 px;
 }
-.initiatives .svg{
+.svg{
   padding: 19px 8px 19px 16px;
 }
-.initiatives .trash{
+.trash1{
   padding: 19px 16px 19px 8px;
 }
 .activities .header{
@@ -1076,4 +1076,27 @@ input[type="checkbox"] {
 }
 .activitiesName{
   padding: 16px 24px 0px 24px;
+}
+.activitiesName .col1{
+  width: 57px;
+}
+
+.activitiesName .col2{
+  width: 121px;
+}
+
+.activitiesName .col3{
+  width: 100px;
+}
+.activitiesName .col4{
+  width: 120px;
+}
+.activitiesName .col5{
+  width: 220px;
+}
+.activitiesName .col6{
+  width: 128px;
+}
+.bgColor7{
+  background-color: #F7F7FC;
 }
