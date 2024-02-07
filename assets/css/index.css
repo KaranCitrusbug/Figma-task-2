@@ -566,7 +566,7 @@ progress {
 }
 
 .padding1 {
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px;
 }
 .trash {
   padding: 19px 16px;
@@ -1092,11 +1092,104 @@ input[type="checkbox"] {
   width: 120px;
 }
 .activitiesName .col5{
-  width: 220px;
+  width: 128px;
 }
 .activitiesName .col6{
-  width: 128px;
+  width: 84px;
 }
 .bgColor7{
   background-color: #F7F7FC;
+}
+
+.management button{
+  border: none;  
+}
+.meetingSchedule{
+  padding-top: 16px;
+  
+}
+.management .col1{
+  width: 218px;
+}
+.management .col2{
+  width: 144px;
+}
+.management .col3{
+  width: 96px;
+}
+ .management progress[value] {
+  -webkit-appearance:none;
+  -moz-appearance:none;        
+  appearance: none;
+}
+.meetingDetails  progress[value] {
+  --w:120px;
+  --color:   linear-gradient(red    0 0) 0 /calc(var(--w)*.26 - 100%) 1px,
+   linear-gradient(orange 0 0) 0 /calc(var(--w)*.51 - 100%) 1px,
+  green;
+  width: 120px;
+  height: 2px;
+}
+.meetingDetails .col1 progress[value]::-webkit-progress-bar {
+  background:  #EBEBF5;
+}
+.meetingDetails .col1 progress[value]::-webkit-progress-value {
+  background: var(--color);
+}
+
+.meetingDetails .col2 progress[value]::-webkit-progress-value {
+  background:var(--color);
+}
+
+.meetingDetails .col3 progress[value]::-webkit-progress-value {
+  background:var(--color);
+}
+
+.setDate{
+  padding: 12px;
+}
+.setDate > div{
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+.process button{
+  border: none;
+}
+.processDetails{
+  padding: 0px 24px 24px 24px;
+}
+.processDetails .col1{
+  width: 132px;
+}
+.processDetails .col2{
+  width:97px;
+}
+.processDetails .col3{
+  width: 140px;
+}
+.processDetails .col4{
+  width: 88px;
+}
+.processDetails .col5{
+  width: 90px
+}
+.processDetails .col6{
+  width:142px;
+}
+.processDetails .col7{
+  width: 84px;
+}
+.responsiblePerson{
+  padding: 10px 12px;
+}
+.responsiblePerson img{
+  width: 26px;
+  height: 26px;
+}
+
+.radius3{
+  border-radius: 8px;
+}
+.processDetails .btn{
+  background-color: white;
 }
