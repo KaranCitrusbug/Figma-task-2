@@ -21,31 +21,33 @@
       <div><img src="./assets/images/navImage/Logo.png" alt="logo" />
       </div>
       <hr>
-      <ul>
-        <li id="active">
+      <ul class="myLink">
+        <li class="navList previous" style="background-color: #f7f7fc;"></li>
+        <li class="active navList">
           <img src="./assets/images/navImage/Aperture.png" alt="aperture" />
         </li>
-        <li>
+        <li class="navList">
           <img src="./assets/images/navImage/Mountains.png" alt="mountains" />
         </li>
-        <li>
+        <li class="navList">
           <img src="./assets/images/navImage/UserSwitch.png" alt="switch" />
         </li>
-        <li>
+        <li class="navList">
           <img src="./assets/images/navImage/Hexagon.png" alt="hexagon" />
         </li>
-        <li>
+        <li class="navList">
           <img src="./assets/images/navImage/UsersFour.png" alt="user" />
         </li>
-        <li>
+        <li class="navList">
           <img src="./assets/images/navImage/ChartPieSlice.png" alt="chartPieSlice" />
         </li>
-        <li>
+        <li class="navList">
           <img src="./assets/images/navImage/RocketLaunch.png" alt="rocket" />
         </li>
-        <li>
+        <li class="navList">
           <img src="./assets/images/navImage/LineSegments.png" alt="lineSegments" />
         </li>
+        <li class="navList" style="background-color: #f7f7fc;"></li>
       </ul>
     </nav>
   </section>
@@ -124,7 +126,10 @@
     </aside>
   </section>
   <section class="mainPage">
+    <!-- header Content -->
     <div class="header-content">
+
+      <!-- main Header -->
       <header>
         <div>
           <img src="./assets/images/mainPage/PaperPlaneTilt.png" alt="message" />
@@ -147,21 +152,27 @@
           <i class="fa-solid fa-angle-right" style="color:#ababc2;"></i>
         </button>
       </header>
+      <!-- Header End -->
+
+      <!-- page Title -->
       <div class="top">
-        <div class="flex1">
-          <div class="mainTitle">
-            <h1>My Redical Focus</h1>
-          </div>
-          <div class="setting">
-            <div>
-              <img src="./assets/images/mainPage/GearSix.png" alt="gear" />
+          <div class="flex1">
+            <div class="mainTitle">
+              <h1>My Redical Focus</h1>
             </div>
-            <div>
-              <p>Redical Focus Setting</p>
+            <div class="setting">
+              <div>
+                <img src="./assets/images/mainPage/GearSix.png" alt="gear" />
+              </div>
+              <div>
+                <p>Redical Focus Setting</p>
+              </div>
             </div>
           </div>
-        </div>
       </div>
+      <!-- page title end -->
+
+      <!-- Tabs section-->
       <div class="tabs" id="tabs">
         <ul>
           <li class="activeTab links">
@@ -176,10 +187,10 @@
           <li class="links">
             <a href="#initiatives">Initiatives</a>
           </li>
-          <li class="links ">
+          <li class="links " style="min-width:158px;">
             <a href="#activities">Recurring Activities</a>
           </li>
-          <li class="links ">
+          <li class="links "  style="min-width:180px;">
             <a href="#management">Management Meetings</a>
           </li>
           <li class="links">
@@ -189,14 +200,16 @@
             <a href="#feedback">Feedback</a>
           </li>
         </ul>
-        <hr class="tabHr">
+        
       </div>
+      <!-- Tabs End -->
 
     </div>
+    <!-- Header Content end -->
 
     <!-- Objective section -->
-    <div class="padding2">
-      <div class="objectives " id="objectives">
+    <div class="padding2" id="objectives">
+      <div class="objectives " >
         <div class="heading padding4 ">
           <div>
             <h1>Objectives</h1>
@@ -277,11 +290,11 @@
             </th>
           </thead>
           <tbody>
-            <tr>
+            <tr >
               <th>
                 <div class=" flex3">
-                  <div class="caretUp ">
-                    <i class="fa-solid fa-angle-up " style="color: #3030d3;width:12px;height: 10px;"></i>
+                  <div class="caretUp  " onclick="firstAccordion()">
+                    <i class="fa-solid fa-angle-up arrowUp " style="color: #3030d3;width:12px;height: 10px;"></i>
                   </div>
                   <div class="typeName col">
                     <div class="bgColor1 padding1 radius3">
@@ -319,7 +332,7 @@
               </th>
               <th>
                 <div class="description">
-                  <div class="details border1 color2">
+                  <div class="padding1 bgColor6 border1 color2">
                     <p class="text3">21.10.2029</p>
                   </div>
                 </div>
@@ -327,19 +340,73 @@
               <th >
                 <div class="padding3 flex1 gap3 ">
                   <div class="flex3">
-                    <input type="range" value="25" min="0" max="100">
+                    <input type="range" value="25" min="0" max="100" id="rangeInput"  oninput="amount.value=rangeInput.value">
                   </div>
-                  <div>25</div>
-                  <div>%</div>
-
+                  <div class="padding12 bgColor6 border1 flex3" style="width: 38px;">
+                    <output id="amount" name="amount" for="rangeInput" class="text4 color2">25</output>
+                  </div>
+                  <div class="color2 tetx2">%</div>
                 </div>
               </th>
             </tr>
-            <tr>
+            <tr class="firstHiddenRow display">
+              <td colspan="3" class="bgColor6 objectiveTitle">                
+                  <div class="flex3 ">
+                    <div class="text2 color3 padding8 flex3">Objective is achieved when</div>
+                  </div>
+              </td>
+              <td colspan="3">
+                <div class="objectiveRequirement">
+                  <div class="bgColor6 flex1 radius3 ">
+                    <div class="list flex2 ">
+                      <div class="flex2 radius2 radius1">
+                        <li class="text3 color2 padding1   ">
+                          We have companyX as client
+                        </li>
+                      </div>
+                    </div>
+                    <div class="trash">
+                      <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="bgColor6 flex1 radius3">
+                    <div class="list  flex2">
+                      <div class="flex2 radius1 radius2">
+                        <li class="text3 color2 padding1 ">
+                          We are larger than competitorY
+                        </li>
+                      </div>
+                    </div>
+                    <div class="trash">
+                      <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="bgColor6 flex1 radius3">
+                    <div class="list flex2">
+                      <div class="flex2 radius1 radius2">
+                        <li class="text3 color2  padding1 ">
+                          We have grown more than 30% in revenue
+                        </li>
+                      </div>
+                    </div>
+                    <div class="trash">
+                      <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
+                    </div>
+                  </div>
+                  <div style="padding: 4px 12px 12px 12px;" class="bgColor6">
+                    <button class="flex1 gap2 radius1 radius2 padding6">
+                      <i class="fa-solid fa-plus" style="color: #3030d3"></i>
+                      <div class="color5 text1">Add Condition</div>
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr >
               <th>
                 <div class=" flex3">
-                  <div class="caretUp ">
-                    <i class="fa-solid fa-angle-up " style="color: #3030d3;width:12px;height: 10px;"></i>
+                  <div class="caretUp " onclick="secondAccordion()">
+                    <i class="fa-solid fa-angle-up arrowUp2" style="color: #3030d3;width:12px;height: 10px;"></i>
                   </div>
                   <div class="typeName col">
                     <div class="bgColor1 padding1 radius3">
@@ -377,7 +444,7 @@
               </th>
               <th>
                 <div class="description">
-                  <div class="details border1 color2">
+                  <div class="padding1 bgColor6  border1 color2">
                     <p class="text3">21.10.2029</p>
                   </div>
                 </div>
@@ -385,305 +452,203 @@
               <th >
                 <div class="padding3 flex1 gap3 ">
                   <div class="flex3">
-                    <input type="range" value="25" min="0" max="100">
+                    <input type="range" value="25" min="0" max="100" id="rangeInput2"  oninput="amount2.value=rangeInput2.value">
                   </div>
-                  <div>25</div>
-                  <div>%</div>
-
+                  <div class="padding12 bgColor6 border1 flex3">
+                    <output id="amount2" name="amount" for="rangeInput2" class="text4 color2">25</output>
+                  </div>
+                  <div class="color2 tetx2">%</div>
                 </div>
               </th>
+            </tr> 
+            <tr class="secondHiddenRow display2">
+              <td colspan="3" class="bgColor6">                
+                  <div class="flex3 ">
+                    <div class="text2 color3 padding8 flex3">Objective is achieved when</div>
+                  </div>
+              </td>
+              <td colspan="3">
+                <div class="objectiveRequirement">
+                  <div class="bgColor6 flex1 radius3 ">
+                    <div class="list flex2 ">
+                      <div class="flex2 radius2 radius1">
+                        <li class="text3 color2 padding1   ">
+                          We have companyX as client
+                        </li>
+                      </div>
+                    </div>
+                    <div class="trash">
+                      <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="bgColor6 flex1 radius3">
+                    <div class="list  flex2">
+                      <div class="flex2 radius1 radius2">
+                        <li class="text3 color2 padding1 ">
+                          We are larger than competitorY
+                        </li>
+                      </div>
+                    </div>
+                    <div class="trash">
+                      <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="bgColor6 flex1 radius3">
+                    <div class="list flex2">
+                      <div class="flex2 radius1 radius2">
+                        <li class="text3 color2  padding1 ">
+                          We have grown more than 30% in revenue
+                        </li>
+                      </div>
+                    </div>
+                    <div class="trash">
+                      <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
+                    </div>
+                  </div>
+                  <div style="padding: 4px 12px 12px 12px;" class="bgColor6">
+                    <button class="flex1 gap2 radius1 radius2 padding6">
+                      <i class="fa-solid fa-plus" style="color: #3030d3"></i>
+                      <div class="color5 text1">Add Condition</div>
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr >
+            <th>
+              <div class=" flex3">
+                <div class="caretUp " onclick="thirdAccordion()">
+                  <i class="fa-solid fa-angle-up arrowUp3" style="color: #3030d3;width:12px;height: 10px;"></i>
+                </div>
+                <div class="typeName col">
+                  <div class="bgColor1 padding1 radius3">
+                    <p class="text2 color1">Company</p>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="padding8 flex3 ">
+                <p class="text3 color2">CEO</p>
+              </div>
+            </th>
+            <th>
+              <div class="responsible">
+                <div class="flex5 padding1 bgColor6 border1 gap1">
+                  <div>
+                    <img src="./assets/images/mainPage/Avatar.png" alt="avatar" width="100%" />
+                  </div>
+                  <div class="flex1">
+                    <img src="./assets/images/mainPage/CaretDown.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="description">
+                <div class="border1 details color2 padding1 flex3 bgColor6 ">
+                  <p class="text3">
+                    By 2030 we want to be the leader in XXX with only newly
+                    launched product line
+                  </p>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="description">
+                <div class="padding1 bgColor6  border1 color2">
+                  <p class="text3">21.10.2029</p>
+                </div>
+              </div>
+            </th>
+            <th >
+              <div class="padding3 flex1 gap3 ">
+                <div class="flex3">
+                  <input type="range" value="25" min="0" max="100" id="rangeInput3"  oninput="amount3.value=rangeInput3.value">
+                </div>
+                <div class="padding12 bgColor6 border1 flex3">
+                  <output id="amount3" name="amount" for="rangeInput3" class="text4 color2">25</output>
+                </div>
+                <div class="color2 tetx2">%</div>
+
+              </div>
+            </th>
+            </tr>
+            <tr class="thirdHiddenRow display3">
+              <td colspan="3" class="bgColor6">                
+                  <div class="flex3 ">
+                    <div class="text2 color3 padding8 flex3">Objective is achieved when</div>
+                  </div>
+              </td>
+              <td colspan="3">
+                <div class="objectiveRequirement">
+                  <div class="bgColor6 flex1 radius3 ">
+                    <div class="list flex2 ">
+                      <div class="flex2 radius2 radius1">
+                        <li class="text3 color2 padding1   ">
+                          We have companyX as client
+                        </li>
+                      </div>
+                    </div>
+                    <div class="trash">
+                      <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="bgColor6 flex1 radius3">
+                    <div class="list  flex2">
+                      <div class="flex2 radius1 radius2">
+                        <li class="text3 color2 padding1 ">
+                          We are larger than competitorY
+                        </li>
+                      </div>
+                    </div>
+                    <div class="trash">
+                      <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="bgColor6 flex1 radius3">
+                    <div class="list flex2">
+                      <div class="flex2 radius1 radius2">
+                        <li class="text3 color2  padding1 ">
+                          We have grown more than 30% in revenue
+                        </li>
+                      </div>
+                    </div>
+                    <div class="trash">
+                      <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
+                    </div>
+                  </div>
+                  <div style="padding: 4px 12px 12px 12px;" class="bgColor6">
+                    <button class="flex1 gap2 radius1 radius2 padding6">
+                      <i class="fa-solid fa-plus" style="color: #3030d3"></i>
+                      <div class="color5 text1">Add Condition</div>
+                    </button>
+                  </div>
+                </div>
+              </td>
             </tr>
           </tbody>
-        </table>
+        </table>      
       </div>
+      <div class="more">
+        <p class="color5">Show 5 More</p>
+      </div>
+    </div>
+    <!-- Objective section end -->
 
-    </div>
-    <div class="padding2 ">
-      
-      <div class="objectiveDetails padding5 ">
-        <div class="flex1">
-          
-         
-          
-         
-          
-         
-        </div>
-        <div class="flex1">
-          
-  
-          
-  
-          
-  
-          
-  
-          
-  
-         
-        </div>
-        <div class="flex1">
-          <div class="col flex3">
-            <div class="caretUp">
-              <i class="fa-solid fa-angle-up accordion" style="color: #3030d3;"></i>
-            </div>
-            <div class="typeName col">
-              <div class="bgColor1 padding1 radius3">
-                <p class="text2 color1">Company</p>
-              </div>
-            </div>
-          </div>
-  
-          <div class="padding8 flex3 ">
-            <p class="text3 color2">CEO</p>
-          </div>
-  
-          <div class="responsible">
-            <div class="flex5 padding1 bgColor6 border1 gap1">
-              <div class="avtarImg">
-                <img src="./assets/images/mainPage/Avatar.png" alt="avatar" width="100%" />
-              </div>
-              <div class="flex1">
-                <img src="./assets/images/mainPage/CaretDown.png" alt="" />
-              </div>
-            </div>
-          </div>
-  
-          <div class="description">
-            <div class="border1 details color2 padding1 flex3 bgColor6 ">
-              <p class="text3">
-                By 2030 we want to be the leader in XXX with only newly
-                launched product line
-              </p>
-            </div>
-          </div>
-  
-          <div class="description">
-            <div class="details border1 color2">
-              <p class="text3">21.10.2029</p>
-            </div>
-          </div>
-  
-          <div class="progressbar">
-            <progress min="0" max="100" value="25"></progress>
-            <input type="text" value="25" class="text4 color2 details1" readonly />
-            <div>25</div>
-            <div class="text4 color2">%</div>
-          </div>
-  
-  
-        </div>
-        
-      </div>
-
-      <div class="row2 accordianDetails">
-        <div style="margin-left: 26px; width: 342px;">
-          <div class="text2 color3 padding8 flex3">Objective is achieved when</div>
-        </div>
-        <div class="divider3">
-          <div></div>
-        </div>
-        <div class="objectiveRequirement">
-          <div class="bgColor6 flex1 radius3 ">
-            <div class="list flex2 ">
-              <div class="flex2 radius2 radius1">
-                <li class="text3 color2 padding1   ">
-                  We have companyX as client
-                </li>
-              </div>
-            </div>
-            <div class="trash">
-              <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
-            </div>
-          </div>
-          <div class="bgColor6 flex1 radius3">
-            <div class="list  flex2">
-              <div class="flex2 radius1 radius2">
-                <li class="text3 color2 padding1 ">
-                  We are larger than competitorY
-                </li>
-              </div>
-            </div>
-            <div class="trash">
-              <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
-            </div>
-          </div>
-          <div class="bgColor6 flex1 radius3">
-            <div class="list flex2">
-              <div class="flex2 radius1 radius2">
-                <li class="text3 color2  padding1 ">
-                  We have grown more than 30% in revenue
-                </li>
-              </div>
-            </div>
-            <div class="trash">
-              <img src="./assets/images/mainPage/TrashSimple.png" alt="" />
-            </div>
-          </div>
-          <div style="padding: 4px 12px 12px 12px;">
-            <button class="flex1 gap2 radius1 radius2 padding6">
-              <i class="fa-solid fa-plus" style="color: #3030d3"></i>
-              <div class="color5 text1">Add Condition</div>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="row flex1">
-        <div class="col1 type">
-          <div class="caretUp">
-            <img src="./assets/images/mainPage/CaretDown.png" alt="caret" />
-          </div>
-          <div class="typeName">
-            <div class="bgColor2">
-              <p class="text2 color4">Company</p>
-            </div>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col">
-          <div class="division">
-            <p class="text2 color2">Sales</p>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col">
-          <div class="responsible">
-            <div>
-              <div class="avtarImg">
-                <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
-              </div>
-              <div class="caretDown">
-                <img src="./assets/images/mainPage/CaretDown.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col4">
-          <div class="description">
-            <div class="border1 details color2">
-              <p class="text3">
-                By 2030 we want to be the leader in XXX with only newly
-                launched product line
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col2">
-          <div class="description">
-            <div class="details border1 color2">
-              <p class="text3">21.10.2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col3">
-          <div class="progressbar">
-            <div class="flex3">
-              <progress min="0" max="100" value="25"></progress>
-            </div>
-            <input type="text" value="25" class="text4 color2 details1" readonly />
-            <div class="text4 color2">%</div>
-          </div>
-        </div>
-      </div>
-      <div class="row flex1">
-        <div class="col1 type">
-          <div class="caretUp">
-            <img src="./assets/images/mainPage/CaretDown.png" alt="caret" />
-          </div>
-          <div class="typeName">
-            <div class="bgColor2">
-              <p class="text2 color4">Company</p>
-            </div>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col">
-          <div class="division">
-            <p class="text2 color2">Sales</p>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col">
-          <div class="responsible">
-            <div>
-              <div class="avtarImg">
-                <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
-              </div>
-              <div class="caretDown">
-                <img src="./assets/images/mainPage/CaretDown.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col4">
-          <div class="description">
-            <div class="border1 details color2 flex1 task">
-              <p class="text3">
-                By 2030 we want to be the leader in XXX with only newly
-                launched product line
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col2">
-          <div class="description">
-            <div class="details border1 color2">
-              <p class="text3">21.10.2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="divider2">
-          <div></div>
-        </div>
-        <div class="col3">
-          <div class="progressbar">
-            <div class="flex3">
-              <progress min="0" max="100" value="25">25%</progress>
-            </div>
-            <input type="text" value="25" class="text4 color2 details1" readonly />
-            <div class="text4 color2">%</div>
-          </div>
-        </div>
-      </div>
-    
-    <div class="more">
-      <p class="color5">Show 5 More</p>
-    </div>
-    </div>
-    <div class="padding2 " id="priorities">
-      <div class="priorities flex1 radius3">
-        <div>
+    <!-- priorities  section start -->
+    <div class="padding2" id="priorities">
+      <div >
+      <div class="priorities flex1 bgColor6 border2 padding4">
+        <div class="arrow" onclick="priorities()">
           <img src="./assets/images/mainPage/CaretUp.png" alt="caret" />
         </div>
         <div class="flex2">
           <p class="text5 color3">Prioritized Tasks</p>
         </div>
-        <div class="flex1 buttons">
-          <div class="flex1 checkbox">
-            <div><input type="checkbox" /></div>
+        <div class="flex1 gap3">
+          <div class="flex3 gap4 padding6">
+            <div class="flex1"><input type="checkbox" /></div>
             <div>
               <p class="text2">Show Completed</p>
             </div>
@@ -699,184 +664,248 @@
         </div>
       </div>
       <hr />
-      <div class=" padding5 bgColor6 flex3">
-        
-          <div class="padding3 flex2">
-            <p class="text1">Task</p>
-          </div>
-          <div class="padding3">
-            <div class="gap1 flex3">
-              <div>
-                <p class="text1">Due Date</p>
-              </div>
-              <div>
-                <img src="./assets/images/mainPage/Funnel.png" alt="filter" />
-              </div>
-            </div>
-          </div>
-          <div class="padding3 flex3">
-            <p class="text1">Time Remaining</p>
-          </div>
-          <div class="flex3 padding3 gap1">
-            <div>
-              <p class="text1">Priority</p>
-            </div>
-            <div>
-              <img src="./assets/images/mainPage/Funnel.png" alt="filter" />
-            </div>
-          </div>
+      <div class=" bgColor6  padding5 prioritiesTable">
+          <table>
+            <thead>
+                <th  style="min-width: 300px;">
+                  <div class="padding3 flex2">
+                    <p class="text1">Task</p>
+                  </div>
+                </th>
+                <th style="width: 144px;">
+                  <div class="padding3" >
+                    <div class="gap1 flex3">
+                      <div>
+                        <p class="text1">Due Date</p>
+                      </div>
+                      <div>
+                        <img src="./assets/images/mainPage/Funnel.png" alt="filter" />
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th>
+                  <div class="padding3 flex3">
+                    <p class="text1">Time Remaining</p>
+                  </div>
+                </th>
+                <th>
+                  <div class="flex3 padding3 gap1">
+                    <div>
+                      <p class="text1">Priority</p>
+                    </div>
+                    <div>
+                      <img src="./assets/images/mainPage/Funnel.png" alt="filter" />
+                    </div>
+                  </div>
+                </th>
+              
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="flex2">
+                    <div class="checkbox-section">
+                      <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="taskDate">
+                      <div class="padding1 border1 text3 flex2 activeTask">Prepare Marketing Review March - 2022</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="taskDate">
+                    <div class="padding1 border1 text3 flex2">
+                      01.01.2023
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="padding10 remainingDay" >
+                    <div class="bgColor3 radius1 gap2 flex1 padding6">
+                      <div>
+                        <i class="fa-regular fa-clock" ></i>
+                      </div>
+                      <div class="text1 color2 ">28d</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="padding10 remainingDay">
+                    <div class="radius1 padding6 gap2  bgColor3">
+                      <div class="text1 color6  flex1 gap2">
+                        <div class="text1 color6">High</div>
+                        <div>
+                          <i class="fa-solid fa-angle-down" style="color: #b20024"></i>
+                        </div>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="flex2">
+                    <div class="checkbox-section">
+                      <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="taskDate">
+                      <div class="padding1 border1 text3 flex2">Meet desired customer deadline</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="taskDate">
+                    <div class="padding1 border1 text3 flex2">
+                      01.01.2023
+                    </div>
+                  </div>
+                </td>
+                <td>
+                    <div class="padding10 remainingDay" >
+                      <div class="bgColor3 radius1 gap2 flex1 padding6">
+                        <div>
+                          <i class="fa-regular fa-clock"  style="color: #b20024;"></i>
+                        </div>
+                        <div class="text1 color6 ">-3d</div>
+                      </div>
+                    </div>
+                </td>
+                <td>
+                  <div class="padding10 remainingDay">
+                    <div class="radius1 padding6 gap2  bgColor2">
+                      <div class="text1 color6  flex1 gap2">
+                        <div class="text1 color4">Medium</div>
+                        <div>
+                          <i class="fa-solid fa-angle-down"style="color: #b26000"></i>
+                        </div>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="flex2">
+                    <div class="checkbox-section">
+                      <label class="container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="taskDate">
+                      <div class="padding1 border1 text3 flex2">Meet desired customer deadline</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="taskDate">
+                    <div class="padding1 border1 text3 flex2">
+                      01.01.2023
+                    </div>
+                  </div>
+              </td>
+                <td>
+                  <div class="padding10 remainingDay" >
+                    <div class="bgColor3 radius1 gap2 flex1 padding6">
+                      <div>
+                        <i class="fa-regular fa-clock" ></i>
+                      </div>
+                      <div class="text1 color2 ">2hrs</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="padding10 remainingDay">
+                    <div class="radius1 padding6 gap2  bgColor3">
+                      <div class="text1 color6  flex1 gap2">
+                        <div class="text1 color6">High</div>
+                        <div>
+                          <i class="fa-solid fa-angle-down" style="color: #b20024"></i>
+                        </div>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="flex2">
+                    <div class="checkbox-section">
+                      <label class="container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="taskDate">
+                      <div class="padding1 border1 text3 flex2 ">Meet desired customer deadline</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="taskDate">
+                    <div class="padding1 border1 text3 flex2">
+                      01.01.2023
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="padding10 remainingDay" >
+                    <div class="bgColor3 radius1 gap2 flex1 padding6">
+                      <div>
+                        <i class="fa-regular fa-clock" ></i>
+                      </div>
+                      <div class="text1 color2 ">1d</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="padding10 remainingDay">
+                    <div class="radius1 padding6 gap2  bgColor4">
+                      <div class="text1 color6  flex1 gap2">
+                        <div class="text1 color1">High</div>
+                        <div>
+                          <i class="fa-solid fa-angle-down" style="color: #089605"></i>
+                        </div>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <hr style="margin: 0px 24px;">
-      <div class="row3">
-        <div class="flex1">
-          <div class="flex2">
-            <div class="checkbox-section">
-              <label class="container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-            </div>
-            <div class="input-section">
-              <input type="text" value="Prepare Marketing Review March - 2022" class="border1" id="activeTask" />
-            </div>
-          </div>
-          <div class="dueDate">
-            <input type="text" value="01.01.2023" readonly class="border1" />
-          </div>
-          <div class="time">
-            <button class="btn">
-              <div>
-                <i class="fa-regular fa-clock"></i>
-              </div>
-              <div class="text1 color2">28d</div>
-            </button>
-          </div>
-          <div class="priority">
-            <button class="btn bgColor3">
-              <div class="text1 color6 color6">High</div>
-              <div>
-                <i class="fa-solid fa-angle-down" style="color: #b20024"></i>
-              </div>
-            </button>
-          </div>
-        </div>
-        <hr />
-        <div class="flex1">
-          <div class="flex2">
-            <div class="checkbox-section">
-              <label class="container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-            </div>
-            <div class="input-section">
-              <input type="text" value="Meet desired customer deadline" class="border1" />
-            </div>
-          </div>
-          <div class="dueDate">
-            <input type="text" value="01.01.2023" readonly class="border1" />
-          </div>
-          <div class="time">
-            <button class="btn bgColor3">
-              <div>
-                <i class="fa-regular fa-clock" style="color: #b20024"></i>
-              </div>
-              <div class="text1 color2 color6">-3d</div>
-            </button>
-          </div>
-          <div class="priority">
-            <button class="btn bgColor2">
-              <div class="text1 color4">Medium</div>
-              <div>
-                <i class="fa-solid fa-angle-down" style="color: #b26000"></i>
-              </div>
-            </button>
-          </div>
-        </div>
-        <hr />
-        <div class="flex1">
-          <div class="flex2">
-            <div class="checkbox-section">
-              <label class="container">
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-              </label>
-            </div>
-            <div class="input-section">
-              <input type="text" value="Meet desired customer deadline" class="border1" />
-            </div>
-          </div>
-          <div class="dueDate">
-            <input type="text" value="01.01.2023" readonly class="border1" />
-          </div>
-          <div class="time">
-            <button class="btn">
-              <div>
-                <i class="fa-regular fa-clock"></i>
-              </div>
-              <div class="text1 color2">2hrs</div>
-            </button>
-          </div>
-          <div class="priority">
-            <button class="btn bgColor3">
-              <div class="text1 color6">High</div>
-              <div>
-                <i class="fa-solid fa-angle-down" style="color: #b20024"></i>
-              </div>
-            </button>
-          </div>
-        </div>
-        <hr />
-        <div class="flex1">
-          <div class="flex2">
-            <div class="checkbox-section">
-              <label class="container">
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-              </label>
-            </div>
-            <div class="input-section">
-              <input type="text" value="Meet desired customer deadline" class="border1" />
-            </div>
-          </div>
-          <div class="dueDate">
-            <input type="text" value="01.01.2023" readonly class="border1" />
-          </div>
-          <div class="time">
-            <button class="btn">
-              <div>
-                <i class="fa-regular fa-clock"></i>
-              </div>
-              <div class="text1 color2">1d</div>
-            </button>
-          </div>
-          <div class="priority">
-            <button class="btn bgColor4">
-              <div class="text1 color1">Low</div>
-              <div>
-                <i class="fa-solid fa-angle-down" style="color: #089605"></i>
-              </div>
-            </button>
-          </div>
-        </div>
-        <hr />
       </div>
       <div class="more">
         <p class="color5">Show 5 More</p>
       </div>
+      
     </div>
-    <div class="padding2 kpiDetail" id="kpis">
-      <div class="kpis padding4">
+    <!-- priorities  section end -->
+
+    <!-- kpis section start -->
+    <div class="padding2" id="kpis">
+      <div class=" padding4 border2 flex5 bgColor6">
         <div class="kpisDate flex4">
           <div class="text5">KPIs</div>
           <div class="text1">Show KPIs for:</div>
-          <div class="flex4 date">
+          <div class="flex4 padding12 border1 gap3">
             <div class="text4 color3">2022</div>
             <div>
               <i class="fa-regular fa-calendar" style="color: #585874"></i>
             </div>
           </div>
-          <div class="flex4 date">
+          <div class="flex4 padding12 border1 gap3">
             <div class="text4 color3">Jan</div>
             <div>
               <i class="fa-solid fa-angle-down" style="color: #585874"></i>
@@ -885,7 +914,7 @@
           <div class="text1 color3">Current Week:2022-02-Q2-CW 28</div>
         </div>
         <div>
-          <button class="btn">
+          <button class="padding12 border1 flex3 gap3">
             <div>
               <i class="fa-solid fa-plus" style="color: #3030d3"> </i>
             </div>
@@ -897,436 +926,439 @@
       <div class="kpiDetails">
         <div style="padding: 0px 24px">
           <div class="header flex2">
-            <div>
-              <i class="fa-solid fa-angle-up" style="color: #3030d3"></i>
+            <div onclick="kpiTable()">
+              <i class="fa-solid fa-angle-up arrow1" style="color: #3030d3"></i>
             </div>
             <div class="flex4" style="gap: 4px">
               <div class="text2 color3">Plastics</div>
-              <div style="
-                      padding: 3px 8px;
-                      background-color: #ebebfe;
-                      border-radius: 6px;
-                    " class="text1 color5">
+              <div class="text1 color5 padding12 border1 bgColor9">
                 4
               </div>
             </div>
           </div>
-          <div class="kpiData">
-            <div class="kpiTable flex1">
-              <div class="colm1 flex2">
-                <div class="text1 padding3">KPI</div>
-              </div>
-              <div class="colm5">
-                <div class="text1 padding3">Responsible</div>
-              </div>
-              <div class="colm4">
-                <div class="text1 padding3">Graph</div>
-              </div>
-              <div class="colm2">
-                <div class="text1 padding3">Unit</div>
-              </div>
-              <div class="colm3">
-                <div class="text1 padding3">Monthly Target</div>
-              </div>
-              <div class="colm3">
-                <div class="text1 padding3">Monthly Actual</div>
-              </div>
-              <div class="colm3">
-                <div class="text1 padding3">Month,%</div>
-              </div>
-              <div class="colm3">
-                <div class="text1 padding3">YTD Target</div>
-              </div>
-            </div>
-            <hr />
-            <div class="kpiRow flex3">
-              <div class="flex2">
-                <div class="colm1 ">
-                  <div class="kpiName flex5">
+          <div class="kpiTable">
+            <table>
+              <thead>
+                <th colspan="2">
+                  <div class=" flex2">
+                    <div class="text1 padding3">KPI</div>
+                  </div>
+                </th>
+                <th>
+                  <div>
+                    <div class="text1 padding3">Responsible</div>
+                  </div>
+                </th>
+                <th>
+                  <div >
+                    <div class="text1 padding3">Graph</div>
+                  </div>
+                </th>
+                <th>
+                  <div>
+                    <div class="text1 padding3">Unit</div>
+                  </div>
+                </th>
+                <th>
+                  <div>
+                    <div class="text1 padding3">Monthly Target</div>
+                  </div>
+                </th>
+                <th>
+                  <div>
+                    <div class="text1 padding3">Monthly Actual</div>
+                  </div>
+                </th>
+                <th>
+                  <div>
+                    <div class="text1 padding3">Month,%</div>
+                  </div>
+                </th>
+                <th>
+                  <div>
+                    <div class="text1 padding3">YTD Target</div>
+                  </div>
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="2">
+                    <div class="flex1">
+                      <div class="padding8">
+                        <i class="fa-solid fa-angle-up" style="color: #3030d3">
+                        </i>
+                      </div>
+                        <div class="padding8 flex5">
+                          <div class="color5 text2">Cost per lead</div>
+                          <div class="color2 moreDetails">...</div>
+                        </div>
+                    </div>
+                  </td>
+                  <td>
+                      <div class=" colm5 flex3">
+                        <div class="responseImg">
+                          <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
+                        </div>
+                        <div class="personName text2 color2">P.G.</div>
+                      </div>
+                  </td>
+                  <td>
+                    <div class="colm4">
+                      <div class="graph">
+                        <i class="fa-solid fa-chart-column" style="color: #585874"></i>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm2">
+                      <div class="unit text2 color3 flex3 unit">&euro;/$</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3 text1">
+                        <div class="monthlyTarget color2">150</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="actual text1">1,583,438</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 monthPr color1 bgColor5">107.21%</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 ytdTarget color2">1,476,923.07</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="flex2">
+                      <div style="min-width: 160px">
+                        <div class="padding8 flex5">
+                          <div class="color5 text2">Add Spent</div>
+                          <div class="color2">...</div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="respons colm5 flex3">
+                      <div class="responseImg">
+                        <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
+                      </div>
+                      <div class="personName text2 color2">P.G.</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm4">
+                      <div class="graph">
+                        <i class="fa-solid fa-chart-column" style="color: #585874"></i>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm2">
+                      <div class="unit text2 color3 flex3 ">&euro;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3 text1">
+                        <div class="monthlyTarget color2">150,000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="actual text1">-19,949</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 monthPr color6 bgColor3">26.55%</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 ytdTarget color2">74,750</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="flex2">
+                      <div style="min-width: 160px">
+                        <div class="padding8 flex5">
+                          <div class="color5 text2">Leads</div>
+                          <div class="color2 moreDetails">
+                            ...
+                            <div class="tooltip text3">Update KPI</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="respons colm5 flex3">
+                      <div class="responseImg">
+                        <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
+                      </div>
+                      <div class="personName text2 color2">P.G.</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm4">
+                      <div class="graph">
+                        <i class="fa-solid fa-chart-column" style="color: #585874"></i>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm2">
+                      <div class="unit text2 color3 flex3 unit">&euro;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3 text1">
+                        <div class="monthlyTarget color2">150,000</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="actual text1">-19,949</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 monthPr color6 bgColor3">26.55%</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 ytdTarget color2">74,750</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
                     <div>
-                      <i class="fa-solid fa-angle-up" style="color: #3030d3"></i>
+                      <div class="padding8 flex5">
+                        <div class="color5 text2">DB VI</div>
+                        <div class="color2">...</div>
+                      </div>
                     </div>
-                    <div class="color5 text2">Cost per lead</div>
-                    <div class="color2 moreDetails">...</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="respons colm5 flex3">
-                  <div class="responseImg">
-                    <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
-                  </div>
-                  <div class="personName text2 color2">P.G.</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm4">
-                  <div class="graph">
-                    <i class="fa-solid fa-chart-column" style="color: #585874"></i>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm2">
-                  <div class="unit text2 color3 flex3 unit">&euro;/$</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3 text1">
-                    <div class="monthlyTarget color2">150</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="actual text1">1,583,438</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 monthPr color1 bgColor5">107.21%</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 ytdTarget color2">1,476,923.07</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="kpiRow flex3">
-              <div>
-                <div style="width: 50px; padding: 0px 10px"></div>
-              </div>
-              <div class="flex2">
-                <div style="width: 140px">
-                  <div class="kpiName flex5">
-                    <div class="color5 text2">Add Spent</div>
-                    <div class="color2">...</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="respons colm5 flex3">
-                  <div class="responseImg">
-                    <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
-                  </div>
-                  <div class="personName text2 color2">P.G.</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm4">
-                  <div class="graph">
-                    <i class="fa-solid fa-chart-column" style="color: #585874"></i>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm2">
-                  <div class="unit text2 color3 flex3 unit">&euro;</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3 text1">
-                    <div class="monthlyTarget color2">150,000</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="actual text1">-19,949</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 monthPr color6 bgColor3">26.55%</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 ytdTarget color2">74,750</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="kpiRow flex3">
-              <div>
-                <div style="width: 50px; padding: 0px 10px"></div>
-              </div>
-              <div class="flex2">
-                <div style="width: 140px">
-                  <div class="kpiName flex5">
-                    <div class="color5 text2">Leads</div>
-                    <div class="color2 moreDetails">
-                      ...
-                      <div class="tooltip text3">Update KPI</div>
+                  </td>
+                  <td>
+                    <div class="respons colm5 flex3">
+                      <div class="responseImg">
+                        <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
+                      </div>
+                      <div class="personName text2 color2">P.G.</div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="respons colm5 flex3">
-                  <div class="responseImg">
-                    <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
-                  </div>
-                  <div class="personName text2 color2">P.G.</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm4">
-                  <div class="graph">
-                    <i class="fa-solid fa-chart-column" style="color: #585874"></i>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm2">
-                  <div class="unit text2 color3 flex3 unit">&euro;</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3 text1">
-                    <div class="monthlyTarget color2">150,000</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="actual text1">-19,949</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 monthPr color6 bgColor3">26.55%</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 ytdTarget color2">74,750</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="kpiRow flex3">
-              <div class="flex2">
-                <div class="colm1">
-                  <div class="kpiName flex5">
-                    <div class="color5 text2">DB VI</div>
-                    <div class="color2">...</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="respons colm5 flex3">
-                  <div class="responseImg">
-                    <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
-                  </div>
-                  <div class="personName text2 color2">P.G.</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm4">
-                  <div class="graph">
-                    <i class="fa-solid fa-chart-column" style="color: #585874"></i>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm2">
-                  <div class="unit text2 color3 flex3 unit">&euro;</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3 text1">
-                    <div class="monthlyTarget color2">74,750</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="actual text1">-19,849</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 bgColor3 monthPr color6">-26.55%</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 ytdTarget color2">74,750</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="kpiRow flex3">
-              <div class="flex2">
-                <div class="colm1">
-                  <div class="kpiName flex5">
-                    <div class="color5 text2">Manufacturing costs</div>
-                    <div class="color2">...</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="respons colm5 flex3">
-                  <div class="responseImg">
-                    <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
-                  </div>
-                  <div class="personName text2 color2">P.G.</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm4">
-                  <div class="graph">
-                    <i class="fa-solid fa-chart-column" style="color: #585874"></i>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm2">
-                  <div class="unit text2 color3 flex3 unit">%</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3 text1">
-                    <div class="monthlyTarget color2">3.22</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="actual text1">13.08</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 monthPr color6 bgColor3">9.85%</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 ytdTarget color2">3.22</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr />
-            <div class="kpiRow flex3">
-              <div class="flex2">
-                <div class="colm1">
-                  <div class="kpiName flex5">
-                    <div class="color5 text2">DB VI Marge</div>
-                    <div class="color2 moreDetails">
-                      ...
-                      <div class="tooltip2 text3">Update Requested</div>
+                  </td>
+                  <td>
+                    <div class="colm4">
+                      <div class="graph">
+                        <i class="fa-solid fa-chart-column" style="color: #585874"></i>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="respons colm5 flex3">
-                  <div class="responseImg">
-                    <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
-                  </div>
-                  <div class="personName text2 color2">P.G.</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm4">
-                  <div class="graph">
-                    <i class="fa-solid fa-chart-column" style="color: #585874"></i>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm2">
-                  <div class="unit text2 color3 flex3 unit">%</div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3 text1">
-                    <div class="monthlyTarget color2">5</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="actual text1">-1.24</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 monthPr color6 bgColor3">-6.24%</div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="colm3">
-                  <div class="padding3">
-                    <div class="text1 ytdTarget color2">5</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </td>
+                  <td>
+                    <div class="colm2">
+                      <div class="unit text2 color3 flex3 unit">&euro;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3 text1">
+                        <div class="monthlyTarget color2">74,750</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="actual text1">-19,849</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 bgColor3 monthPr color6">-26.55%</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 ytdTarget color2">74,750</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="flex2">
+                      <div class="colm1">
+                        <div class="padding8 flex5">
+                          <div class="color5 text2">Manufacturing costs</div>
+                          <div class="color2">...</div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="respons colm5 flex3">
+                      <div class="responseImg">
+                        <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
+                      </div>
+                      <div class="personName text2 color2">P.G.</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm4">
+                      <div class="graph">
+                        <i class="fa-solid fa-chart-column" style="color: #585874"></i>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm2">
+                      <div class="unit text2 color3 flex3 unit">%</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3 text1">
+                        <div class="monthlyTarget color2">3.22</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="actual text1">13.08</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 monthPr color6 bgColor3">9.85%</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 ytdTarget color2">3.22</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="flex2">
+                      <div class="colm1">
+                        <div class="padding8 flex5">
+                          <div class="color5 text2">DB VI Marge</div>
+                          <div class="color2 moreDetails">
+                            ...
+                            <div class="tooltip2 text3">Update Requested</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <div class="respons colm5 flex3">
+                        <div class="responseImg">
+                          <img src="./assets/images/mainPage/Avatar.png" alt="avatar" />
+                        </div>
+                        <div class="personName text2 color2">P.G.</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm4">
+                      <div class="graph">
+                        <i class="fa-solid fa-chart-column" style="color: #585874"></i>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm2">
+                      <div class="unit text2 color3 flex3 unit">%</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3 text1">
+                        <div class="monthlyTarget color2">5</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="actual text1">-1.24</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 monthPr color6 bgColor3">-6.24%</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="colm3">
+                      <div class="padding3">
+                        <div class="text1 ytdTarget color2">5</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <!-- <div class="flex1 horizontal">
-              <div>
-                <hr class="hr1" />
-              </div>
-              <div>
-                <hr class="hr2" />
-              </div>
-            </div> -->
           <div class="header flex2">
             <div>
               <i class="fa-solid fa-angle-down" style="color: #3030d3"></i>
             </div>
             <div class="flex4" style="gap: 4px">
               <div class="text2 color3">Waste Disposal National</div>
-              <div style="
-                      padding: 3px 8px;
-                      background-color: #ebebfe;
-                      border-radius: 6px;
-                    " class="text1 color5">
+              <div class="text1 color5 padding12 border1 bgColor9">
                 7
               </div>
             </div>
@@ -1337,6 +1369,9 @@
         </div>
       </div>
     </div>
+    <!-- kpis section end -->
+
+    <!-- initiatives section start -->
     <div class="initiatives padding2" id="initiatives">
       <div class="header flex5 padding4 text5">
         <div>Initiatives</div>
@@ -1537,6 +1572,9 @@
         <p class="color5">Show 5 More</p>
       </div>
     </div>
+    <!-- initiatives section end -->
+
+    <!-- activities section start -->
     <div class="padding2 activities" id="activities">
       <div class="header flex5 padding4 text5 radius1">
         <div>Recurring Activities</div>
@@ -1797,6 +1835,9 @@
         <p class="color5">Show 5 More</p>
       </div>
     </div>
+    <!-- activities section end -->
+
+    <!-- management section start -->
     <div class="padding2 management" id="management">
       <div class="header flex5 padding4 text5 bgColor6 radius1">
         <div>Management Meetings</div>
@@ -1948,6 +1989,9 @@
         <p class="color5">Show 5 More</p>
       </div>
     </div>
+    <!-- management section end -->
+
+    <!-- process section start -->
     <div class="padding2 process" id="process">
       <div class="header flex5 padding4 text5 bgColor6 radius1">
         <div>Process</div>
@@ -2178,6 +2222,9 @@
         <hr />
       </div>
     </div>
+    <!-- process section end -->
+
+    <!-- feedback section start -->
     <div class="padding2" id="feedback">
       <div class="feedback flex1 bgColor6">
         <div class="feedbackYear flex2">
@@ -3059,9 +3106,8 @@
         </div>
       </div>
     </div>
+    <!-- feedback section end -->
   </section>
-
-
   <script src="./assets/js/index.js"></script>
 </body>
 
